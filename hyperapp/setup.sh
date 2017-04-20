@@ -29,7 +29,7 @@ if ! [ -f /tmp/qrc ]; then
 
   command -v curl > /dev/null && curl -o /tmp/qrc -sL https://github.com/fumiyas/qrc/releases/download/v0.1.1/qrc_linux_amd64 && chmod +x /tmp/qrc
 
-  command -v curl > /dev/null || command -v wget > /dev/null && wget -qO /tmp/qrc https://github.com/fumiyas/qrc/releases/download/v0.1.1/qrc_linux_amd64
+  command -v curl > /dev/null || command -v wget > /dev/null && wget -qO /tmp/qrc https://github.com/fumiyas/qrc/releases/download/v0.1.1/qrc_linux_amd64 && chmod +x /tmp/qrc
 
 fi
 
