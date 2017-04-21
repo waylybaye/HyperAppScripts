@@ -24,10 +24,12 @@ fi
 
 
 IP=$($HTTP ipinfo.io/ip)
+PORT=${SSH_CLIENT##* }
+
 echo "Connection Config"
 echo "-----------------------"
 echo "IP\t" ":" $IP
-echo "PORT\t" ":" ${SSH_CLIENT##* }
+echo "PORT\t" ":" $PORT
 echo "USER\t" ":" $(whoami)
 echo "-----------------------"
 
@@ -46,4 +48,4 @@ fi
 
 echo "\nPlease scan QR using HyperApp:\n\n"
 
-echo "ssh://$(whoami):$HA_KEY@$IP" | /tmp/qrc
+echo "ssh://$(whoami)@$IP:$PORT" | /tmp/qrc
