@@ -4,7 +4,9 @@ QRC_DEST='/tmp/qrc'
 
 if ! [ -z "$HA_KEY" ] ; then
   echo "Install public key ..."
-  mkdir ~/.ssh
+  if ! [ -d ~/.ssh ] ; then
+    mkdir ~/.ssh
+  fi
   echo $HA_KEY >> ~/.ssh/authorized_keys
 fi
 
