@@ -2,6 +2,13 @@
 
 QRC_DEST='/tmp/qrc'
 
+if ! [ -z "$HA_KEY" ] ; then
+  echo "Install public key ..."
+  mkdir ~/.ssh
+  echo $HA_KEY >> ~/.ssh/authorized_keys
+fi
+
+
 if command -v curl > /dev/null; then
   HTTP='curl -sL '
 
