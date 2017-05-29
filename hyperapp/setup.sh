@@ -36,7 +36,7 @@ echo "-----------------------"
 
 
 if ! [ -f /tmp/qrc ]; then
-  echo "\nDownloding QR tool [2.72M] ..."
+  echo "\nDownloading QR tool [2.72M] ..."
 
   command -v curl > /dev/null && curl -o /tmp/qrc -sL https://github.com/fumiyas/qrc/releases/download/v0.1.1/qrc_linux_amd64 && chmod +x /tmp/qrc
 
